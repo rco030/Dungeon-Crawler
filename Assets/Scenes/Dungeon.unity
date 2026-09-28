@@ -225,8 +225,8 @@ Transform:
   m_GameObject: {fileID: 166551412}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.7217269, y: -1.0204592, z: 0.75865954}
-  m_LocalScale: {x: 10, y: 0.3129503, z: 10}
+  m_LocalPosition: {x: 0.7217269, y: -1.0204592, z: 0.7586599}
+  m_LocalScale: {x: 29.004, y: 0.2956458, z: 29.004}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2079646968}
@@ -637,6 +637,8 @@ GameObject:
   - component: {fileID: 1008923128}
   - component: {fileID: 1008923127}
   - component: {fileID: 1008923126}
+  - component: {fileID: 1008923131}
+  - component: {fileID: 1008923130}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -739,6 +741,49 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1650856965}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1008923130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008923125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4284319dec2c4b54f810b34d7dc86617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  movementDirection: {x: 0, y: 0, z: 0}
+  horizontalMovement: 0
+  forwardMovement: 0
+  movementVelocity: 0
+--- !u!54 &1008923131
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008923125}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1650856964
 GameObject:
   m_ObjectHideFlags: 0

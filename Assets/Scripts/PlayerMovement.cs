@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    float moveSpeed;
+    [SerializeField] float moveSpeed;
+
     private CharacterController chController;
 
     void Start()
@@ -22,6 +23,10 @@ public class PlayerMovement : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
 
         Vector3 input = new Vector3(horizontal, 0, vertical);
+
+        Vector3 targetVelocity = input * moveSpeed;
+
+        input = Vector3.ClampMagnitude(input, 1.0f);
 
         chController.Move(input * Time.deltaTime);
     }

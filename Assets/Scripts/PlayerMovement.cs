@@ -24,10 +24,10 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 input = new Vector3(horizontal, 0, vertical);
 
-        Vector3 targetVelocity = input * moveSpeed;
-
         input = Vector3.ClampMagnitude(input, 1.0f);
 
-        chController.Move(input * Time.deltaTime);
+        Vector3 targetVelocity = input * moveSpeed;
+
+        chController.Move(targetVelocity * Time.deltaTime);
     }
 }

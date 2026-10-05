@@ -317,8 +317,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 278707699}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.14493546, y: 0.31126446, z: -0.048104033, w: -0.93797344}
-  m_LocalPosition: {x: 0.35355, y: 0.24749, z: -9.64645}
+  m_LocalRotation: {x: -0.13325831, y: -0.004180577, z: -0.00031135033, w: -0.9910725}
+  m_LocalPosition: {x: 0.35355, y: 3.24749, z: -9.64645}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -786,7 +786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9e3bcdb33ec08b4a9975d51d3712bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  moveSpeed: 0
+  moveSpeed: 5
 --- !u!143 &1008923133
 CharacterController:
   m_ObjectHideFlags: 0
@@ -881,13 +881,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1140859742}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.14493546, y: 0.31126446, z: -0.048104033, w: -0.93797344}
-  m_LocalPosition: {x: 0.35355, y: 0.24749, z: -9.64645}
+  m_LocalRotation: {x: -0.13325831, y: -0.004180577, z: -0.00031135033, w: -0.9910725}
+  m_LocalPosition: {x: 0.35355, y: 3.24749, z: -9.64645}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 15.316, y: 0.497, z: 0.103}
 --- !u!114 &1140859745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -906,7 +906,7 @@ MonoBehaviour:
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
-  FollowOffset: {x: 0, y: 0, z: -10}
+  FollowOffset: {x: 0, y: 3, z: -10}
 --- !u!1 &1650856964
 GameObject:
   m_ObjectHideFlags: 0

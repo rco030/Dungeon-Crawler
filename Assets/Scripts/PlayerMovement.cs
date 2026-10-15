@@ -1,33 +1,40 @@
-using System;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] float moveSpeed;
+    [SerializeField] float moveSpeed = 5f;
 
-    private CharacterController chController;
+    private Rigidbody rb;
 
     void Start()
     {
-        chController = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        Move();        
+        Move();
+        rb.angularVelocity = Vector3.zero;
     }
 
     private void Move()
     {
         float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+        float vertical = Input.GetAxis("Vertical");
 
-        Vector3 input = new Vector3(horizontal, 0, vertical);
+        Vector3 input = new Vector3(horizontal, 0f, vertical);
+        input = Vector3.ClampMagnitude(input, 1f);
 
-        input = Vector3.ClampMagnitude(input, 1.0f);
+        Vector3 movement =
+            transform.right * input.x +
+            transform.forward * input.z;
+        
+        movement *= moveSpeed;
 
-        Vector3 targetVelocity = input * moveSpeed;
-
-        chController.Move(targetVelocity * Time.deltaTime);
+        rb.linearVelocity = new Vector3(
+            movement.x,
+            rb.linearVelocity.y,
+            movement.z
+        );
     }
 }
